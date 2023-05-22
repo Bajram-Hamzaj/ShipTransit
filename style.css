@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=Shadows+Into+Light&display=swap');
+
+:root {
+    --bgcolor: rgb(219, 142, 125);
+    --bgcolor1: linear-gradient(90deg, rgba(219, 142, 125, 1) 0%, rgba(245, 165, 158, 0.933920704845815) 50%, rgba(255, 115, 0, 1) 97%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar Home About Transit Info */
+
+
+/* header navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background: var(--bgcolor);
+    background: var(--bgcolor1);
+    cursor: pointer;
+    width: 100%;
+}
+
+.transit__logo img {
+    width: 150px;
+}
+
+.transit__icon i {
+    padding: 10px;
+    font-size: 24px;
+}
+
+
+.transit__logo img {
+    animation: imglogo 3s ease 0s 3 normal forwards;
+}
+
+@keyframes imglogo {
+
+    0%,
+    100% {
+        transform: translateX(0%);
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        transform: translateX(-30px) rotate(-6deg);
+    }
+
+    30% {
+        transform: translateX(15px) rotate(6deg);
+    }
+
+    45% {
+        transform: translateX(-15px) rotate(-3.6deg);
+    }
+
+    60% {
+        transform: translateX(9px) rotate(2.4deg);
+    }
+
+    75% {
+        transform: translateX(-6px) rotate(-1.2deg);
+    }
+}
+
+/* Section one slider */
+
+.transit__text {
+    position: absolute;
+    margin: 30%;
+    padding: 15px;
+    z-index: 999;
+    opacity: 0.8;
+    background: var(--bgcolor);
+    background: var(--bgcolor1);
+    border-radius: 5%;
+}
+
+.transit__text h1 {
+    font-size: 42px;
+    color: #eee;
+}
+
+.transit__text span {
+    color: black;
+}
+
+.transit__text p {
+    font-size: 20px;
+    padding-top: 15px;
+    inline-size: 450px;
+}
+
+#slide__images {
+    height: 950px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    display: flex;
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 950px;
+    object-fit: cover;
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    background-color: transparent;
+    padding: 20px;
+    font-size: 30px;
+    color: #eee;
+    border: 2px solid orange;
+    top: 90%;
+    transform: translateY(-50%);
+    z-index: 100;
+    cursor: pointer;
+}
+
+.arrow:focus {
+    outline: 0;
+}
+
+.left-arrow {
+    left: calc(5vw - 65px);
+}
+
+.right-arrow {
+    right: calc(5vw - 65px);
+}
+
+
+/* section two aboutus */
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0px 70px 0px;
+}
+
+.text__aboutus h1 {
+    font-size: 52px;
+    padding-bottom: 20px;
+}
+
+.text__aboutus span {
+    color: rgb(219, 142, 125);
+    color: linear-gradient(90deg, rgba(219, 142, 125, 1) 0%, rgba(245, 165, 158, 0.933920704845815) 50%, rgba(255, 115, 0, 1) 97%);
+    border-radius: 5%;
+}
+
+.text__aboutus p {
+    inline-size: 300px;
+    padding-bottom: 30px;
+}
+
+.text__aboutus a {
+    text-decoration: none;
+    font-size: 32px;
+    color: #eee;
+    background: var(--bgcolor);
+    background: var(--bgcolor1);
+    border-radius: 5%;
+    padding: 10px 20px;
+    border-radius: 30px;
+
+}
+
+.text__aboutus a:hover {
+    outline: none;
+    background: black;
+    transition: 0.2s ease-in-out;
+}
+
+.img__aboutus {
+    background: var(--bgcolor);
+    background: var(--bgcolor1);
+    border-radius: 5%;
+    padding: 10px 20px;
+    border-radius: 50%;
+}
+
+.img__aboutus img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+/* section transit compay */
+
+
+.transit__compay img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: blur(4px);
+    --webkit-filter: blur(10px);
+    position: relative;
+}
+
+.text__details {
+    z-index: 9999;
+    position: absolute;
+    margin: 100px 0px 0px 300px;
+}
+
+.text__details h1 {
+    font-size: 52px;
+    color: #eee;
+}
+
+.text__details p {
+    border: 2px solid #eee;
+    inline-size: 600px;
+    font-size: 16px;
+    color: #eee;
+    padding: 10px;
+    background: var(--bgcolor);
+    background: var(--bgcolor1);
+    opacity: 0.9;
+}
+
+/* CEO of transit Company */
+
+.transit__CEO {
+    display: flex;
+    margin: 50px 0px 30px 0px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--bgcolor);
+    background: var(--bgcolor1);
+    padding: 20px;
+
+}
+
+/* CEO Scroll JS */
+.CEO__described {
+    padding: 10px;
+    transform: translateX(-400%);
+    transition: transform 0.5s ease;
+}
+
+.CEO__described:nth-of-type(even) {
+    transform: translateX(400%);
+}
+
+.CEO__described.show {
+    transform: translateX(0);
+}
+
+/* Img scroll JS */
+.transit__big-ship {
+    transform: translateX(400%);
+    transition: transform 0.5s ease;
+}
+
+.transit__big-ship:nth-of-type(even) {
+    transform: translateX(400%);
+}
+
+.transit__big-ship.active {
+    transform: translateX(0);
+}
+
+.CEO__described img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.CEO__described span {
+    color: #eee;
+    font-size: 25px;
+
+}
+
+.CEO__described p {
+    inline-size: 600px;
+    color: #eee;
+    padding: 1rem 0px 2rem 0px;
+}
+
+.CEO__described a {
+    text-decoration: none;
+    border: 1px solid orange;
+    padding: 10px 20px;
+    background-color: rgb(245, 189, 125);
+    border-radius: 30px;
+    color: #eee;
+    font-weight: bold;
+}
+
+.CEO__described a:hover {
+    outline: none;
+    background-color: #eee;
+    color: black;
+    font-weight: bold;
+}
+
+.transit__big-ship img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    padding-left: 25px;
+}
+
+/* Footer */
+
+.transit__contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    padding-bottom: 30px;
+    background: black;
+    border-radius: 10px;
+}
+
+
+.iput__text {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+
+}
+
+.iput__text input {
+
+    margin-bottom: 10px;
+    padding: 20px 30px 20px 30px;
+    font-size: 24px;
+    justify-self: start;
+}
+
+.iput__text textarea {
+    font-size: 24px;
+    padding: 20px 30px 20px 30px;
+}
+
+.input a {
+    margin: 240px;
+    text-decoration: none;
+    border: 1px solid var(--bgcolor);
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    background: var(--bgcolor1);
+    outline: none;
+    color: #eee;
+    font-weight: bold;
+}
+
+.input a:hover {
+    background: #eee;
+    border: 1px solid #eee;
+    font-weight: bold;
+    color: black;
+
+}
+
+.info__contact {
+    width: 575px;
+    height: 575px;
+    border-radius: 10px;
+    background: var(--bgcolor);
+    background: var(--bgcolor1);
+}
+
+.icon__text {
+
+    margin: 50px 10px 50px 10px;
+    border: 5px dotted white;
+}
+
+.info__contact h2 {
+    padding: 17px;
+    font-size: 32px;
+    color: #eee;
+}
+
+.info__contact i {
+    font-size: 52px;
+    padding: 7px;
+}
+
+@media only screen and (max-width: 992px) {
+    .arrow {
+        top: 50%;
+    }
+
+    .wrapper {
+        flex-wrap: wrap;
+    }
+
+    .text__aboutus {
+        padding: 20px;
+    }
+
+    .text__details {
+        margin: 90px;
+    }
+
+    .transit__CEO {
+        flex-wrap: wrap;
+    }
+
+    .CEO__described {
+
+        margin-bottom: 30px;
+
+    }
+
+    .transit__contact {
+        flex-wrap: wrap;
+    }
+
+    .info__contact {
+        width: 600px;
+        height: 600px;
+
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .slide__images {
+        margin-bottom: 0px;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 700px;
+
+    }
+
+    .transit__text {
+        margin: 10%;
+    }
+
+    .transit__text p {
+
+        inline-size: 300px;
+    }
+
+    .arrow {
+        visibility: hidden;
+    }
+
+    .img__aboutus img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .text__details {
+        margin: 0;
+    }
+
+    .text__details p {
+
+        inline-size: 350px;
+        font-size: 15px;
+    }
+
+    .CEO__described p {
+        inline-size: 300px;
+    }
+
+    .transit__big-ship img {
+        width: 500px;
+    }
+
+    .iput__text {
+        width: 50%;
+        margin-left: 200px;
+    }
+
+    .input a {
+        margin: 300px;
+    }
+
+
+}
